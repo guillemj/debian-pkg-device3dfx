@@ -1,9 +1,9 @@
 3Dfx device driver
 ==================
 
-To use this device driver, you need to have created /dev/3dfx. It
-should be a character device with major 107 and minor 0, and you can
-use this command to create it:
+To use this device driver, you need to have created /dev/3dfx or devfs
+support in the kernel. It should be a character device with major 107
+and minor 0, and you can use this command to create it:
 
  mknod /dev/3dfx c 107 0
  chown root:video /dev/3dfx
