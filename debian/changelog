@@ -1,8 +1,15 @@
-device3dfx (2004.05.05-1) UNRELEASED; urgency=low
+device3dfx (2004.08.21-1) unstable; urgency=low
 
+  * New Upstream Release.
+    - Really fix Linux kernel 2.6 support. (Closes: #238131, #238132, #255202)
+    - Remove 00_honour_KSRC.patch already applied upstream.
   * Added the location of the Subversion repo used for the packages.
+  * Update debian/patch.mk, provide a patch target.
+  * Fix Linux kernel version detection.
+  * Disable not used debhelper scripts.
+    - s/dh_installmanpages/dh_installman/.
 
- -- Guillem Jover <guillem@debian.org>  Wed, 18 Aug 2004 20:34:13 +0200
+ -- Guillem Jover <guillem@debian.org>  Sat, 21 Aug 2004 08:21:37 +0200
 
 device3dfx (2004.01.25-1) unstable; urgency=low
 

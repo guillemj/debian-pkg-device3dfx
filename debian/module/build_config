@@ -16,9 +16,9 @@ getkpkgvar()
   awk -F " *:= *" "\$1 == \"$1\" { print \$2 }" /etc/kernel-pkg.conf
 }
 
-getlinuxvar()
+getlinuxversion()
 {
-  awk -F " *= *" "\$1 == \"$1\" { print \$2 }" $KSRC/Makefile
+  sed -ne 's/.*UTS_RELEASE.*"\(.*\)"/\1/p' < $KSRC/include/linux/version.h
 }
 
 # Generating build configuation
@@ -75,6 +75,6 @@ if [ -z "$ROOTCMD" -a "`id -u`" != "0" ]; then
 fi
 print_var ROOTCMD
 
-KVERS="`getlinuxvar VERSION`.`getlinuxvar PATCHLEVEL`.`getlinuxvar SUBLEVEL``getlinuxvar EXTRAVERSION`"
+KVERS="`getlinuxversion`"
 print_var KVERS
 
