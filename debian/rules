@@ -1,0 +1,84 @@
+#!/usr/bin/make -f
+# debian/rules for device3dfx to build device3dfx-source
+#
+# Copyright (C) 1999 Steve Haslam
+# Copyright (C) 2003 Guillem Jover
+#
+# Distributable under the terms of the GNU GPL version 2 (or later).
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+package = device3dfx
+psource = $(package)-source
+
+include debian/patch.mk
+
+build: build-stamp
+build-stamp: pre-build
+	dh_testdir
+
+	touch build-stamp
+
+clean::
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp install-stamp
+
+	dh_clean
+
+target = debian/$(psource)/usr/src/modules/$(package)
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	install -c -m 644 Makefile *.c $(target)
+	cp -R debian/module $(target)/debian
+	cp $(target)/debian/control.in $(target)/debian/control
+	cp debian/copyright debian/changelog $(target)/debian
+	chown -R root.root $(target)
+	chmod +x $(target)/debian/rules $(target)/debian/build_config
+	tar -C debian/$(psource)/usr/src -cvzf debian/$(psource)/usr/src/$(package).tar.gz modules/$(package)
+	rm -r debian/$(psource)/usr/src/modules
+
+	touch install-stamp
+
+testmodule: build install
+	tar -C .. -xvzf debian/$(psource)/usr/src/$(package).tar.gz
+
+# Build architecture-independent files here.
+binary-indep: build install
+#	dh_testversion
+	dh_testdir
+	dh_testroot
+#	dh_installdebconf
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installinit
+	dh_installcron
+#	dh_installmanpages
+	dh_installinfo
+#	dh_undocumented
+	dh_installchangelogs
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+#	dh_perl
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+# Build architecture-dependent files here.
+binary-arch: build install
+# Nothing to do.
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install
+

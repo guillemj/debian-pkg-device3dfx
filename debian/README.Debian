@@ -1,0 +1,61 @@
+device3dfx for Debian
+=====================
+
+This is the driver for a 3Dfx 3D graphics card. It is a kernel module
+that you must compile to match your kernel. You must also create a
+/dev/3dfx device in order for the Glide libraries to access your 3dfx
+card.
+
+The package build system has been rewritten and now supports debuild,
+dpkg-buildpackage, old fashioned debian/rules targets and make-kpkg.
+
+
+Using this package to make a module without using kernel-package
+----------------------------------------------------------------
+
+When you install the device3dfx-source package, it will provide
+"/usr/src/device3dfx.tar.gz". Unpack it ("tar xzvf device3dfx.tar.gz"),
+but you can unpack it in another place instead of /usr/src/, for example
+I unpack it from ~/kernel, so my modules are all in ~/kernel/modules.
+
+You can define some parameters when building the package, such as kernel
+source directory, maintainer, revision, root cmd etc. Otherwise they will
+be taken from kernel-package's config file or guessed if it doesn't exist.
+
+It will look in /usr/src/linux for the kernel source, but you can point
+it somewhere else by defining KSRC.
+
+Example:
+
+  cd ~/kernel/modules/device3dfx
+  KSRC=~/kernel/linux dpkg-buildpackage -rfakeroot
+  sudo dpkg -i ~/kernel/device3dfx-module-2.4.20_2003.05.16-1+custom_i386.deb
+  debclean
+
+If you object to building modules as root, try changing the group or
+ownership of the /usr/src/modules tree to something you can write to
+(chown it to you, or chgrp it to src, make it group writable and put
+yourself in the src group). Make sure that debian/rules can figure out
+the ROOTCMD parameter (e.g. in /etc/kernel-pkg.conf, or simply install
+fakeroot) and it will do the compiling as you and the building using
+$ROOTCMD (which can be fakeroot or sudo as you wish).
+
+
+Using this package to make a module using kernel-package
+--------------------------------------------------------
+
+Install the package kernel-package, and make sure your kernel source
+is accessible as /usr/src/linux.
+
+As above, unpack the source code. Make sure you have write access to
+"/usr/src", and unpack the archive there.
+This will create the directory "/usr/src/modules/device3dfx".
+Then go to "/usr/src/linux" and run "make-kpkg modules_image".
+This should create the module in a package in "/usr/src", in the form
+"device3dfx-module-KVERS_MODVERS+DVER_ARCH.deb". So install this
+module and get fragging!
+
+
+--
+Original file by Steve Haslam <araqnid@debian.org>
+Updated by Guillem Jover <guillem@debian.org>

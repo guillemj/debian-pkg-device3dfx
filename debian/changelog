@@ -1,0 +1,169 @@
+device3dfx (2003.11.03-2) #unreleased#; urgency=low
+
+  * Split diff patches:
+    - 00_honour_KSRC.patch
+  * Use debian/patch.mk.
+
+ -- Guillem Jover <guillem@debian.org>  Tue, 11 Nov 2003 09:23:16 +0100
+
+device3dfx (2003.11.03-1) unstable; urgency=low
+
+  * New Upstream Release.
+  * Renamed README.debian to README.Debian.
+  * Changed device group to video.
+    - Updated debian/module/postinst.
+    - Updated debian/module/README.Debian accordingly.
+  * Fixed chmod to use ':' instead.
+  * Now using Standards-Version 3.5.10.
+
+ -- Guillem Jover <guillem@debian.org>  Mon,  3 Nov 2003 09:36:52 +0100
+
+device3dfx (2003.05.16-2) unstable; urgency=low
+
+  * Use Build-Depends-Indep instead of Build-Depends.
+  * Add Build-Depends to the -source package.
+  * Versioned the build dependencies to debhelper.
+  * debian/copyright:
+    - Fixed a path typo to the GPL license.
+    - Added maintainer history.
+    - Cleaned a bit the file.
+
+ -- Guillem Jover <guillem@debian.org>  Mon, 26 May 2003 14:19:42 +0200
+
+device3dfx (2003.05.16-1) unstable; urgency=low
+
+  * New maintainer (Closes: #189952).
+  * Removed emacs cruft from changelog.
+  * Convert to non-native version.
+  * Added devfs support.
+  * Added kernel MODULE_* declarations to avoid tainting the kernel.
+  * Fixed bug when compiling for 2.4 kernels with modversions
+    (Closes: #116320, #151461).
+  * Stripped leading slash from debian/dirs file.
+  * Added Build-Depends.
+  * Added DEB_BUILD_OPTIONS support.
+  * Rewrote module building:
+    - Updated build instructions documentation (Closes: #54830).
+    - Removed build dependency need on m4, now using sed.
+    - debian/module/rules: Use dpkg-parsechangelog.
+    - Support standard rules targets, as well as make-kpkg transparently.
+    - Switched VERSION+KDREV order on module version.
+    - Generate correctly the module version, respecting epochs
+      (Closes: #100719).
+  * Fixed deprecated gcc options giving warnings.
+  * Now using Standards-Version 3.5.10.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 16 May 2003 19:59:25 +0200
+
+device3dfx (2001.07.28) unstable; urgency=low
+
+  * New upstream. (closes: #75598)
+  * Changing things around to make things work for kernel-package.
+    (closes: #83018, #82269, #82991, #88632, #92207, #59766)
+
+ -- Zephaniah E. Hull <warp@debian.org>  Sat, 28 Jul 2001 04:03:22 -0400
+
+device3dfx (2000.11.02) unstable; urgency=low
+
+  * New maintainer, I keep frogetting to upload this.
+  * Updated source to current CVS.
+
+ -- Zephaniah E. Hull <warp@debian.org>  Thu,  2 Nov 2000 04:50:02 -0500
+
+device3dfx (2.3.4-2) unstable; urgency=low
+
+  * Look in target kernel for /proc file system, not running kernel
+  * Added some info about how device3dfx-source builds to README.debian
+  * Removed debian/debian.module/changelog.m4 which was confusing
+  * Make debian/buildpkg executable too
+  * Updated URL in debian/copyright
+
+ -- Steve Haslam <araqnid@debian.org>  Sun,  9 Jan 2000 17:14:47 +0000
+
+device3dfx (2.3.4-1) unstable; urgency=low
+
+  * New upstream version (Closes: #54476)
+
+ -- Steve Haslam <araqnid@debian.org>  Sun,  9 Jan 2000 04:55:21 +0000
+
+device3dfx (2.3.3-1) unstable; urgency=low
+
+  * New upstream version (silly version numbering detected), this should
+    hopefully close #53216
+  * Build module debs in /usr/src, not /usr/src/modules (Closes: #51940)
+  * Updated license pathname
+
+ -- Steve Haslam <araqnid@debian.org>  Thu, 23 Dec 1999 18:21:28 +0000
+
+device3dfx (2.3-6) unstable; urgency=low
+
+  * Set executable bit on generated debian/rules files (Closes: #53082)
+
+ -- Steve Haslam <araqnid@debian.org>  Sun, 19 Dec 1999 19:09:52 +0000
+
+device3dfx (2.3-5) unstable; urgency=low
+
+  * Module packages provide 'device3dfx-module' now (Closes: #52822)
+
+ -- Steve Haslam <araqnid@debian.org>  Thu, 16 Dec 1999 12:16:35 +0000
+
+device3dfx (2.3-4) unstable; urgency=low
+
+  * Edited Makefile to work with kernel 2.3 (Closes: #51859)
+    [nb: I haven't tested this, but the change is very simple]
+    [edited the right version this time]
+
+ -- Steve Haslam <araqnid@debian.org>  Tue,  7 Dec 1999 23:25:07 +0000
+
+device3dfx (2.3-3) unstable; urgency=low
+
+  * cd to /dev before running MAKEDEV
+
+ -- Steve Haslam <araqnid@debian.org>  Sat, 27 Nov 1999 16:06:12 +0000
+
+device3dfx (2.3-2) unstable; urgency=low
+
+  * Oops- change Makefile to use $(KSRC). And test packages before
+    uploading them :|
+
+ -- Steve Haslam <araqnid@debian.org>  Sat, 27 Nov 1999 16:00:54 +0000
+
+device3dfx (2.3-1) unstable; urgency=low
+
+  * New upstream version (Closes: #51334)
+
+ -- Steve Haslam <araqnid@debian.org>  Sat, 27 Nov 1999 15:53:27 +0000
+
+device3dfx (2.2-3) unstable; urgency=low
+
+  * When making -source: Install .c and Makefile with mode 644
+  * When building -module: Remove install-stamp in clean target
+
+ -- Steve Haslam <araqnid@debian.org>  Sun, 31 Oct 1999 19:33:38 +0000
+
+device3dfx (2.2-2) unstable; urgency=low
+
+  * Filled out the "buildpkg" script for the derived source package, added
+    notes on using it to device3dfx-source/README.debian.
+
+ -- Steve Haslam <araqnid@debian.org>  Sun, 31 Oct 1999 19:16:28 +0000
+
+device3dfx (2.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Rewrote build system- uses debhelper, and respects KSRC setting
+    from kernel-package
+  * Now adds an /etc/modutils entry (Closes: #40397)
+  * Some documentation written, and /dev/3dfx automagically created
+    (Closes: #43585)
+  * Module packages renamed to device3dfx-module-KVERS, and will
+    conflict/replace device3dfx-modules-KVERS
+
+ -- Steve Haslam <araqnid@debian.org>  Sat, 30 Oct 1999 16:40:39 +0100
+
+device3dfx (2.0-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Steve Haslam <araqnid@debian.org>  Tue, 18 May 1999 20:17:44 +0100
+

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+DEVICE=/dev/3dfx
+
+if test ! -e /dev/.devfsd -a ! -c $DEVICE; then
+  cd /dev
+  if MAKEDEV 3dfx; then
+    echo "MAKEDEV made device: $DEVICE"
+  else
+    printf "Making device: $DEVICE"
+    mknod $DEVICE c 107 0
+    chown root:video $DEVICE
+    chmod 0660 $DEVICE
+    echo " done."
+  fi
+fi

@@ -1,0 +1,46 @@
+Debianised by Steve Haslam, <araqnid@debian.org>, then maintained by
+Zephaniah E. Hull <warp@debian.org>.
+
+Currently maintained by Guillem Jover <guillem@debian.org>.
+
+Originally from: <http://linux.3dfx.com/>
+It was downloaded from <http://sf.net/projects/glide/>
+
+This module is GPL, viz.:
+
+--------------- Clarification ----------------------------------------
+Date: Thu, 13 May 1999 22:17:00 -0700
+From: Daryll Strauss <daryll@harlot.rb.ca.us>
+To: araqnid <steve@arise.demon.co.uk>
+Subject: Re: device3dfx licence, redistributable?
+X-Mailer: Mutt 0.95.4us
+In-Reply-To: <19990513105022.A27560@arise.demon.co.uk>;
+             from araqnid on Thu, May 13, 1999 at +10:50:22AM +0100
+
+On Thu, May 13, 1999 at 10:50:22AM +0100, araqnid wrote:
+> I've got a voodoo2 card, and I've installed the device3dfx kernel
+> driver I found on your page,
+> <URL:http://glide.xxedgexx.com/3DfxRPMS.html>. Since I'm a Debian
+> developer, I'd like to include it in the Debian distribution, if
+> that's possible.
+>
+> However, it's not clear to me whether the license for the glide
+> drivers (which precludes redistribution afaict) also applies to
+> device3dfx- and the 3dfx_driver.c file doesn't contain a clear
+> copyright statement, which we would need for Debian. The RPM built
+> from the device3dfx.src.rpm says "copyright: GPL", but I can't find
+> anything to back this up...
+
+The device is GPL'd. At least that's the intent. We should make that
+more clear.
+
+The X servers have the license stated, and will be XFree licensed as
+they are being donated to XFree.
+
+                                                - |Daryll
+--------------- Clarification ----------------------------------------
+
+See /usr/share/common-licenses/GPL for a copy of the license.
+
+All additions for Debian are also licensed under the GPL.
+

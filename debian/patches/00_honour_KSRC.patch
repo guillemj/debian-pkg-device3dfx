@@ -1,0 +1,13 @@
+#DPATCHLEVEL=1
+--- device3dfx-2003.11.03.orig/Makefile
++++ device3dfx-2003.11.03/Makefile
+@@ -18,7 +18,8 @@
+                  -fomit-frame-pointer -fno-strict-aliasing
+ endif
+ 
+-KHEADERS ?= /usr/include
++KSRC ?= /usr/src/linux
++KHEADERS ?= $(KSRC)/include
+ KVERS ?= $(shell ./kinfo --UTS)
+ MODULES_DIR = $(DESTDIR)/lib/modules/$(KVERS)
+ 

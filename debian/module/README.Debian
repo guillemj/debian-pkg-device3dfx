@@ -1,0 +1,17 @@
+3Dfx device driver
+==================
+
+To use this device driver, you need to have created /dev/3dfx. It
+should be a character device with major 107 and minor 0, and you can
+use this command to create it:
+
+ mknod /dev/3dfx c 107 0
+ chown root:video /dev/3dfx
+ chmod 660 /dev/3dfx
+
+Thus to be able to use this device you should be in the video group,
+or arranged for login to auto-add you to it.
+
+--
+Original file by Steve Haslam <araqnid@debian.org>
+Updated by Guillem Jover <guillem@debian.org>

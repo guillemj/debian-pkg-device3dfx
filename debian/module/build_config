@@ -1,0 +1,80 @@
+#!/bin/sh
+
+print_var()
+{
+  eval echo "$1 = \$$1"
+}
+
+die()
+{
+  echo "$*" >&2
+  exit 1
+}
+
+getkpkgvar()
+{
+  awk -F " *:= *" "\$1 == \"$1\" { print \$2 }" /etc/kernel-pkg.conf
+}
+
+getlinuxvar()
+{
+  awk -F " *= *" "\$1 == \"$1\" { print \$2 }" $KSRC/Makefile
+}
+
+# Generating build configuation
+
+if [ -f /etc/kernel-pkg.conf ]; then
+  [ -n "$KMAINT" ] || KMAINT=`getkpkgvar maintainer`
+  [ -n "$KEMAIL" ] || KEMAIL=`getkpkgvar email`
+  [ -n "$KDREV" ] || KDREV=`getkpkgvar debian`
+  [ -n "$ROOTCMD" ] || ROOTCMD=`getkpkgvar root_cmd`
+fi
+
+if [ -z "$KMAINT" ]; then
+  # Inventing maintainer name
+  KMAINT="Kernel maintainer"
+fi
+print_var KMAINT
+
+if [ -z "$KEMAIL" ]; then
+  # Inventing maintainer email
+  if [ -f "/etc/mailname" ]; then
+    domain=`cat /etc/mailname`
+  else
+    domain=`hostname --fqdn`
+  fi
+  KEMAIL="${LOGNAME-${USER-root}}"
+fi
+print_var KEMAIL
+
+if [ -z "$KDREV" ]; then
+  # Inventing debian rev
+  KDREV="custom"
+fi
+print_var KDREV
+
+if [ -z "$KSRC" ]; then
+  # Looking for kernel source
+  if [ -d "/usr/src/linux" ]; then
+    KSRC="/usr/src/linux"
+  elif [ -d "$PWD/linux" ]; then
+    KSRC="$PWD/linux"
+  else
+    die "# Unable to find kernel source"
+  fi
+fi
+print_var KSRC
+
+if [ -z "$ROOTCMD" -a "`id -u`" != "0" ]; then
+  # Looking for root cmd
+  if [ -f "/usr/bin/fakeroot" ]; then
+    ROOTCMD=fakeroot
+  elif [ -f "/usr/bin/sudo" ]; then
+    ROOTCMD=sudo
+  fi
+fi
+print_var ROOTCMD
+
+KVERS="`getlinuxvar VERSION`.`getlinuxvar PATCHLEVEL`.`getlinuxvar SUBLEVEL``getlinuxvar EXTRAVERSION`"
+print_var KVERS
+
