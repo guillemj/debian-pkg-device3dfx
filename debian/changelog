@@ -1,4 +1,4 @@
-device3dfx (2004.01.22-1) unstable; urgency=low
+device3dfx (2004.01.25-1) unstable; urgency=low
 
   * New Upstrem Release.
     - Ported to linux kernel 2.6. (Closes: #220271)
@@ -10,7 +10,7 @@ device3dfx (2004.01.22-1) unstable; urgency=low
   * debian/module/rules: Corrected a typo on a PHONY sentence.
   * debian/module/README.Debian: Added a note about devfs.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 22 Jan 2004 21:24:51 +0100
+ -- Guillem Jover <guillem@debian.org>  Sun, 25 Jan 2004 10:03:11 +0100
 
 device3dfx (2003.11.03-1) unstable; urgency=low
 
