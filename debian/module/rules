@@ -82,7 +82,7 @@ clean: create-control
 	rm -f configure-stamp build-stamp install-stamp
 	rm -f debian/build.vars
 
-.PHONY: build install configure ceate-control
+.PHONY: build install configure create-control
 
 binary_modules: binary-modules
 binary-modules: install-stamp
