@@ -6,6 +6,10 @@ Currently maintained by Guillem Jover <guillem@debian.org>.
 Originally from: <http://linux.3dfx.com/>
 It was downloaded from <http://sf.net/projects/glide/>
 
+The debian packages are maintained through Subversion on:
+
+   <http://svn.debian.org/viewcvs/pkg-device3dfx/>
+
 This module is GPL, viz.:
 
 --------------- Clarification ----------------------------------------
