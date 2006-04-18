@@ -2,7 +2,7 @@ Source: device3dfx
 Section: graphics
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
-Build-Depends: debhelper (>= 4)
+Build-Depends: debhelper (>= 5)
 Standards-Version: 3.6.1
 
 Package: device3dfx-module-@KVERS@
