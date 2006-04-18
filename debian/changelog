@@ -3,6 +3,7 @@ device3dfx (2004.08.21-2) UNRELEASED; urgency=low
   * Fix spelling error in package description. (Closes: #363233)
     Thanks to Simon Waters <simon@technocool.net>.
   * Now using Standards-Version 3.6.2 (no changes needed).
+  * Fix Subversion repository URL.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 19 Apr 2006 01:51:47 +0300
 

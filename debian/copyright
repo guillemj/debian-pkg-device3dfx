@@ -8,7 +8,7 @@ It was downloaded from <http://sf.net/projects/glide/>
 
 The debian packages are maintained through Subversion on:
 
-   <http://svn.debian.org/viewcvs/pkg-device3dfx/>
+   <svn://svn.debian.org/pkg-device3dfx/>
 
 This module is GPL, viz.:
 
