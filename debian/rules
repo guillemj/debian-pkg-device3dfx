@@ -14,17 +14,11 @@ psource = $(package)-source
 
 include debian/patch.mk
 
-build: build-stamp
-build-stamp: patch
-	dh_testdir
-
-	touch build-stamp
+build: patch
 
 clean: unpatch
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp install-stamp
-
 	dh_clean
 
 target = debian/$(psource)/usr/src/modules/$(package)
@@ -34,7 +28,7 @@ install: build
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-
+	
 	install -c -m 644 Makefile *.c $(target)
 	cp -R kbuild $(target)
 	cp -R debian/module $(target)/debian
@@ -45,41 +39,27 @@ install: build
 	tar -C debian/$(psource)/usr/src -cvzf debian/$(psource)/usr/src/$(package).tar.gz modules/$(package)
 	rm -r debian/$(psource)/usr/src/modules
 
-	touch install-stamp
-
 testmodule: build install
 	tar -C .. -xvzf debian/$(psource)/usr/src/$(package).tar.gz
 
-# Build architecture-independent files here.
 binary-indep: build install
-#	dh_testversion
 	dh_testdir
 	dh_testroot
-#	dh_installdebconf
 	dh_installdocs
 	dh_installexamples
-#	dh_installmenu
-#	dh_installemacsen
-#	dh_installpam
-#	dh_installinit
-#	dh_installcron
-#	dh_installman
-#	dh_installinfo
-#	dh_undocumented
 	dh_installchangelogs
 	dh_link
 	dh_compress
 	dh_fixperms
 	dh_installdeb
-#	dh_perl
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
 
-# Build architecture-dependent files here.
 binary-arch: build install
-# Nothing to do.
+	# Nothing to do.
 
 binary: binary-indep binary-arch
+
 .PHONY: build clean binary-indep binary-arch binary install
 
