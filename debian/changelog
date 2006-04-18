@@ -5,6 +5,8 @@ device3dfx (2004.08.21-2) UNRELEASED; urgency=low
   * Now using Standards-Version 3.6.2 (no changes needed).
   * Fix Subversion repository URL.
   * Upgrade to debhelper compat version 5.
+  * Rename debian/patch.mk clean target to unpatch. Make patch and unpatch
+    single colon rules. Make unpatch PHONY.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 19 Apr 2006 01:51:47 +0300
 
