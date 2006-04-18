@@ -3,7 +3,7 @@ Section: graphics
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends-Indep: debhelper (>= 4)
-Standards-Version: 3.6.1
+Standards-Version: 3.6.2
 
 Package: device3dfx-source
 Architecture: all
