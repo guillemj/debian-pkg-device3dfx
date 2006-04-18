@@ -3,7 +3,7 @@ Section: graphics
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends: debhelper (>= 5)
-Standards-Version: 3.6.1
+Standards-Version: 3.6.2
 
 Package: device3dfx-module-@KVERS@
 Architecture: i386
@@ -12,7 +12,7 @@ Replaces: device3dfx-modules-@KVERS@
 Provides: device3dfx-module
 Description: device driver source for 3Dfx boards for 2.2+ kernels
  This package installs the 3Dfx device driver to allow accessa to 3Dfx
- boards and seeting its MTRR:s correctly without the user having
+ boards and setting its MTRR:s correctly without the user having
  root privileges.
  .
  It should work on 2.2/2.3/2.4/2.5/2.6 kernels, including SMP enabled kernels.
