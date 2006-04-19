@@ -3,14 +3,44 @@ Zephaniah E. Hull <warp@debian.org>.
 
 Currently maintained by Guillem Jover <guillem@debian.org>.
 
-Originally from: <http://linux.3dfx.com/>
-It was downloaded from <http://sf.net/projects/glide/>
+The upstream source was downloaded from:
+
+    <http://sf.net/projects/glide/>
 
 The debian packages are maintained through Subversion on:
 
-   <svn://svn.debian.org/pkg-device3dfx/>
+    <svn://svn.debian.org/pkg-device3dfx/>
 
-This module is GPL, viz.:
+Upstream Authors:
+
+    Daryll Straus
+    Jon Taylor
+    Jens Axboe
+    Carlo Wood <carlo@alinoe.com>
+    Joseph Kain <joseph@3dfx.com>
+    Guillem Jover <guillem@hadrons.org>
+    et al.
+
+License:
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
+
+All additions for Debian are also licensed under the GPL.
 
 --------------- Clarification ----------------------------------------
 Date: Thu, 13 May 1999 22:17:00 -0700
@@ -43,8 +73,4 @@ they are being donated to XFree.
 
                                                 - |Daryll
 --------------- Clarification ----------------------------------------
-
-See /usr/share/common-licenses/GPL for a copy of the license.
-
-All additions for Debian are also licensed under the GPL.
 

@@ -9,6 +9,7 @@ device3dfx (2004.08.21-2) UNRELEASED; urgency=low
     single colon rules. Make unpatch PHONY.
   * Do not use stamp files.
   * Remove unused commented commands.
+  * Reformat copyright file, add GPL snippet license, add upstream authors.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 19 Apr 2006 01:51:47 +0300
 
