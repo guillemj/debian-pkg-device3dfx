@@ -3,6 +3,7 @@ device3dfx (2007.02.06-1) UNRELEASED; urgency=low
   * New Upstream Release.
     - Fix build failures with 2.6 kernels upto 2.6.20. (Closes: #409885)
   * Add a Tag: field to the binary package, using the data from debtags.
+  * Now using Standards-Version 3.7.2 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Tue,  6 Feb 2007 07:33:00 +0200
 
