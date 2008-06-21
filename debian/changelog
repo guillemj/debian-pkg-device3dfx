@@ -11,6 +11,9 @@ device3dfx (2007.02.06-2) UNRELEASED; urgency=low
   * Add a debian/README.source file.
   * Now using Standards-Version 3.8.0.
   * Remove packaging svn information from debian/copyright.
+  * Improve debian/copyright:
+    - Rename 'Upstream Authors' to 'Copyright Holders'.
+    - Add copyright years and symbol.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 20 Apr 2007 03:41:49 +0300
 
