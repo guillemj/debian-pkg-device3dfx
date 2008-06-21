@@ -3,7 +3,7 @@ Section: graphics
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends: debhelper (>= 5)
-Standards-Version: 3.7.2
+Standards-Version: 3.8.0
 
 Package: device3dfx-module-@KVERS@
 Architecture: i386
