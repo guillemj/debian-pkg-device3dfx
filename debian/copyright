@@ -7,10 +7,6 @@ The upstream source was downloaded from:
 
     <http://sf.net/projects/glide/>
 
-The debian packages are maintained through Subversion on:
-
-    <svn://svn.debian.org/pkg-device3dfx/>
-
 Upstream Authors:
 
     Daryll Straus
