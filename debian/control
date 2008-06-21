@@ -2,6 +2,7 @@ Source: device3dfx
 Section: graphics
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
+Homepage: http://glide.sf.net/
 Vcs-Browser: http://git.hadrons.org/?p=debian/pkgs/device3dfx.git
 Vcs-Git: git://git.hadrons.org/git/debian/pkgs/device3dfx.git
 Build-Depends: debhelper (>= 5), quilt (>= 0.40)
