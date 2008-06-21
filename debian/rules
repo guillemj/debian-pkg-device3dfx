@@ -1,8 +1,8 @@
 #!/usr/bin/make -f
 # debian/rules for device3dfx to build device3dfx-source
 #
-# Copyright (C) 1999 Steve Haslam
-# Copyright (C) 2003, 2004, 2006, 2007 Guillem Jover
+# Copyright © 1999 Steve Haslam
+# Copyright © 2003, 2004, 2006, 2007 Guillem Jover
 #
 # Distributable under the terms of the GNU GPL version 2 (or later).
 
