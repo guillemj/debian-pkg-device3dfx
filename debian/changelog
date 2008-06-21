@@ -14,6 +14,7 @@ device3dfx (2007.02.06-2) UNRELEASED; urgency=low
   * Improve debian/copyright:
     - Rename 'Upstream Authors' to 'Copyright Holders'.
     - Add copyright years and symbol.
+  * Remove Tag field, it's better maintained outside the package.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 20 Apr 2007 03:41:49 +0300
 

@@ -12,7 +12,6 @@ Package: device3dfx-source
 Architecture: all
 Depends: make, debhelper
 Recommends: kernel-package
-XB-Tag: hardware::video, role::source, use::driver
 Description: device driver source for 3Dfx boards for 2.2+ kernels
  This package is the source for the 3Dfx device driver to allow access
  to 3Dfx boards and setting its MTRR:s correctly without the user having
