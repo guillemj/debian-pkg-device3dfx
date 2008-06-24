@@ -12,10 +12,10 @@ Package: device3dfx-source
 Architecture: all
 Depends: make, debhelper
 Recommends: kernel-package
-Description: device driver source for 3Dfx boards for 2.2+ kernels
+Description: Linux 2.2+ device driver source for 3Dfx boards
  This package is the source for the 3Dfx device driver to allow access
  to 3Dfx boards and setting its MTRR:s correctly without the user having
  root privileges.
  .
- It should work on 2.2/2.3/2.4/2.5/2.6 kernels, including SMP enabled kernels.
+ It should work on Linux 2.2+ kernels, including SMP enabled kernels.
 

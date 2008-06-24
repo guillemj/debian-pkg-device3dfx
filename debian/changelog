@@ -20,6 +20,10 @@ device3dfx (2008.06.24-1) UNRELEASED; urgency=low
     - Update copyright holder years.
   * Remove Tag field, it's better maintained outside the package.
   * Use UTF-8 copyright symbol in debian/rules files.
+  * Improve package description by:
+    - Explicitely mentioning Linux.
+    - Collapsing all the supported kernel versions into '2.2+'.
+    - Replace reference to 'source' with 'module' in the module package.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 20 Apr 2007 03:41:49 +0300
 
