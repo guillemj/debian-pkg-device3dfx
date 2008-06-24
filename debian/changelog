@@ -1,5 +1,7 @@
-device3dfx (2007.02.06-2) UNRELEASED; urgency=low
+device3dfx (2008.06.24-1) UNRELEASED; urgency=low
 
+  * New upstream release.
+    - Fix build failures with kernels upto 2.6.23.
   * Now using Standards-Version 3.7.2 (no changes needed), in the module.
   * Switched to quilt:
     - Add new debian/patches/series file.
@@ -15,6 +17,7 @@ device3dfx (2007.02.06-2) UNRELEASED; urgency=low
     - Rename 'Upstream Authors' to 'Copyright Holders'.
     - Add copyright years and symbol.
     - Refer to GPL-2 from common-licenses instead of just GPL.
+    - Update copyright holder years.
   * Remove Tag field, it's better maintained outside the package.
   * Use UTF-8 copyright symbol in debian/rules files.
 
