@@ -26,7 +26,7 @@ target = debian/$(psource)/usr/src/modules/$(package)
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 	dh_installdirs
 	
 	install -c -m 644 Makefile *.c $(target)

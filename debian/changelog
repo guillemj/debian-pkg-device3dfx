@@ -1,6 +1,7 @@
 device3dfx (2008.06.24-2) UNRELEASED; urgency=low
 
   * Switch to debhelper compat version 7.
+  * Use dh_prep instead of “dh_clean -k”.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
 
