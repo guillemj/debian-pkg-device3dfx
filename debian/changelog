@@ -2,13 +2,14 @@ device3dfx (2008.06.24-2) UNRELEASED; urgency=low
 
   * Switch to debhelper compat version 7.
   * Use dh_prep instead of “dh_clean -k”.
+  * Cleanup and fix misspellings in debian/changelog.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
 
 device3dfx (2008.06.24-1) unstable; urgency=low
 
   * New upstream release.
-    - Fix build failures with kernels upto 2.6.23.
+    - Fix build failures with Linux kernels up to 2.6.23.
   * Now using Standards-Version 3.7.2 (no changes needed), in the module.
   * Switched to quilt:
     - Add new debian/patches/series file.
@@ -28,16 +29,16 @@ device3dfx (2008.06.24-1) unstable; urgency=low
   * Remove Tag field, it's better maintained outside the package.
   * Use UTF-8 copyright symbol in debian/rules files.
   * Improve package description by:
-    - Explicitely mentioning Linux.
-    - Collapsing all the supported kernel versions into '2.2+'.
+    - Explicitly mentioning Linux.
+    - Collapsing all the supported Linux kernel versions into '2.2+'.
     - Replace reference to 'source' with 'module' in the module package.
 
  -- Guillem Jover <guillem@debian.org>  Tue, 24 Jun 2008 07:49:37 +0300
 
 device3dfx (2007.02.06-1) unstable; urgency=low
 
-  * New Upstream Release.
-    - Fix build failures with 2.6 kernels upto 2.6.20. (Closes: #409885)
+  * New upstream release.
+    - Fix build failures with Linux kernels up to 2.6.20. (Closes: #409885)
   * Add a Tag: field to the binary package, using the data from debtags.
   * Now using Standards-Version 3.7.2 (no changes needed).
   * Move debhelper from Build-Depends-Indep to Build-Depends as it's being
@@ -62,7 +63,7 @@ device3dfx (2004.08.21-2) unstable; urgency=low
 
 device3dfx (2004.08.21-1) unstable; urgency=low
 
-  * New Upstream Release.
+  * New upstream release.
     - Really fix Linux kernel 2.6 support. (Closes: #238131, #238132, #255202)
     - Remove 00_honour_KSRC.patch already applied upstream.
   * Added the location of the Subversion repo used for the packages.
@@ -75,13 +76,13 @@ device3dfx (2004.08.21-1) unstable; urgency=low
 
 device3dfx (2004.01.25-1) unstable; urgency=low
 
-  * New Upstrem Release.
-    - Ported to linux kernel 2.6. (Closes: #220271)
+  * New upstream Release.
+    - Ported to Linux kernel 2.6. (Closes: #220271)
   * Split diff patches:
     - 00_honour_KSRC.patch
   * Use debian/patch.mk.
-  * Updated package description to mention 2.6 kernel support and
-    lowercased first letter from short description.
+  * Updated package description to mention Linux 2.6 kernel support and
+    lower cased first letter from short description.
   * debian/module/rules: Corrected a typo on a PHONY sentence.
   * debian/module/README.Debian: Added a note about devfs.
 
@@ -89,7 +90,7 @@ device3dfx (2004.01.25-1) unstable; urgency=low
 
 device3dfx (2003.11.03-1) unstable; urgency=low
 
-  * New Upstream Release.
+  * New upstream release.
   * Renamed README.debian to README.Debian.
   * Changed device group to video.
     - Updated debian/module/postinst.
@@ -117,8 +118,8 @@ device3dfx (2003.05.16-1) unstable; urgency=low
   * Removed emacs cruft from changelog.
   * Convert to non-native version.
   * Added devfs support.
-  * Added kernel MODULE_* declarations to avoid tainting the kernel.
-  * Fixed bug when compiling for 2.4 kernels with modversions
+  * Added Linux kernel MODULE_* declarations to avoid tainting the kernel.
+  * Fixed bug when compiling for Linux 2.4 kernels with modversions
     (Closes: #116320, #151461).
   * Stripped leading slash from debian/dirs file.
   * Added Build-Depends.
@@ -146,7 +147,7 @@ device3dfx (2001.07.28) unstable; urgency=low
 
 device3dfx (2000.11.02) unstable; urgency=low
 
-  * New maintainer, I keep frogetting to upload this.
+  * New maintainer, I keep forgetting to upload this.
   * Updated source to current CVS.
 
  -- Zephaniah E. Hull <warp@debian.org>  Thu,  2 Nov 2000 04:50:02 -0500
