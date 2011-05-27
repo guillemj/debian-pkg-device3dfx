@@ -10,7 +10,7 @@ Standards-Version: 3.8.0
 
 Package: device3dfx-source
 Architecture: all
-Depends: module-assistant, make, debhelper (>= 7)
+Depends: module-assistant, make, debhelper (>= 7), ${misc:Depends}
 Recommends: kernel-package
 Description: Linux 2.2+ device driver source for 3Dfx boards
  This package is the source for the 3Dfx device driver to allow access

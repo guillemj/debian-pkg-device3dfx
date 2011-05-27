@@ -17,6 +17,7 @@ device3dfx (2008.06.24-2) UNRELEASED; urgency=low
     - Replace debian/module/build_config with m-a make includes.
     - Add module-assistant to device3dfx-source Depends.
   * Add a version (>= 7) to device3dfx-source debhelper Depends.
+  * Add ${misc:Depends} to device3dfx-source Depends field.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
 
