@@ -1,4 +1,4 @@
-device3dfx (2011.05.27-1) UNRELEASED; urgency=low
+device3dfx (2011.05.27-1) unstable; urgency=low
 
   * New upstream release.
     - Fix build failures with Linux kernels up to 2.6.39.
@@ -22,7 +22,7 @@ device3dfx (2011.05.27-1) UNRELEASED; urgency=low
   * Add ${misc:Depends} to device3dfx-source Depends field.
   * Now using Standards-Version 3.9.2 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
+ -- Guillem Jover <guillem@debian.org>  Fri, 27 May 2011 08:23:54 +0200
 
 device3dfx (2008.06.24-1) unstable; urgency=low
 
