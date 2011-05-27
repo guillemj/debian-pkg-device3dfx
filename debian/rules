@@ -2,7 +2,7 @@
 # debian/rules for device3dfx to build device3dfx-source
 #
 # Copyright © 1999 Steve Haslam
-# Copyright © 2003, 2004, 2006, 2007 Guillem Jover
+# Copyright © 2003, 2004, 2006, 2007, 2011 Guillem Jover
 #
 # Distributable under the terms of the GNU GPL version 2 (or later).
 
@@ -12,11 +12,9 @@
 package = device3dfx
 psource = $(package)-source
 
-include /usr/share/quilt/quilt.make
+build:
 
-build: patch
-
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	dh_clean
@@ -34,6 +32,7 @@ install: build
 	cp -R debian/module $(target)/debian
 	cp $(target)/debian/control.in $(target)/debian/control
 	cp debian/copyright debian/changelog $(target)/debian
+	cp -R debian/source $(target)/debian
 	chown -R root.root $(target)
 	chmod +x $(target)/debian/rules $(target)/debian/build_config
 	tar -C debian/$(psource)/usr/src -cvzf debian/$(psource)/usr/src/$(package).tar.gz modules/$(package)
