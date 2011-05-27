@@ -8,6 +8,7 @@ device3dfx (2008.06.24-2) UNRELEASED; urgency=low
     - Remove quilt.make include from debian/rules.
     - Remove patch and unpatch targets from debian/rules.
     - Remove now unneeded debian/README.source.
+  * Rename obsolete debian/module/modules file to debian/module/modprobe.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
 
