@@ -9,8 +9,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-package = device3dfx
-psource = $(package)-source
+pname = device3dfx
+psource = $(pname)-source
+pmodule = $(pname)-module
 
 build:
 
@@ -19,7 +20,7 @@ clean:
 	dh_testroot
 	dh_clean
 
-target = debian/$(psource)/usr/src/modules/$(package)
+target = debian/$(psource)/usr/src/modules/$(pname)
 
 install: build
 	dh_testdir
@@ -30,18 +31,19 @@ install: build
 	install -c -m 644 Makefile *.c $(target)
 	cp -R kbuild $(target)
 	cp -R debian/module $(target)/debian
-	sed -n '0,/^$$/p' debian/control > $(target)/debian/control.in
-	cat debian/control.templ >> $(target)/debian/control.in
-	cp $(target)/debian/control.in $(target)/debian/control
+	sed -n '0,/^$$/p' debian/control > $(target)/debian/control.modules.in
+	cat debian/control.templ >> $(target)/debian/control.modules.in
+	cp $(target)/debian/control.modules.in $(target)/debian/control
+	cp debian/rules debian/compat $(target)/debian
 	cp debian/copyright debian/changelog $(target)/debian
 	cp -R debian/source $(target)/debian
 	chown -R root.root $(target)
-	chmod +x $(target)/debian/rules $(target)/debian/build_config
-	tar -C debian/$(psource)/usr/src -cvzf debian/$(psource)/usr/src/$(package).tar.gz modules/$(package)
+	chmod +x $(target)/debian/rules
+	tar -C debian/$(psource)/usr/src -cvzf debian/$(psource)/usr/src/$(pname).tar.gz modules/$(pname)
 	rm -r debian/$(psource)/usr/src/modules
 
 testmodule: build install
-	tar -C .. -xvzf debian/$(psource)/usr/src/$(package).tar.gz
+	tar -C .. -xvzf debian/$(psource)/usr/src/$(pname).tar.gz
 
 binary-indep: build install
 	dh_testdir
@@ -61,6 +63,46 @@ binary-arch: build install
 	# Nothing to do.
 
 binary: binary-indep binary-arch
+
+
+PACKAGE := $(pmodule)
+
+MA_DIR ?= /usr/share/modass
+
+-include $(MA_DIR)/include/generic.mk
+-include $(MA_DIR)/include/common-rules.mk
+
+kdist_config: prep-deb-files
+
+kdist_configure: kdist_config
+
+kdist_clean: clean
+	dh_testdir
+	dh_testroot
+	dh_clean
+	
+	$(MAKE) clean
+
+binary-modules: prep-deb-files
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	
+	$(MAKE) install_modules DESTDIR=debian/$(PKGNAME)
+	
+	dh_installdocs
+	dh_installexamples
+	dh_installmodules
+	dh_installchangelogs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol -- -v"$(VERSION)"
+	dh_md5sums
+	dh_builddeb --destdir=$(DEB_DESTDIR)
 
 .PHONY: build clean binary-indep binary-arch binary install
 

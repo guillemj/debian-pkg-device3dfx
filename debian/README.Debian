@@ -7,7 +7,8 @@ that you must compile to match your kernel. You must also create a
 card.
 
 The package build system has been rewritten and now supports debuild,
-dpkg-buildpackage, old fashioned debian/rules targets and make-kpkg.
+dpkg-buildpackage, module-assistant, old fashioned debian/rules targets
+and make-kpkg.
 
 
 Using this package to make a module without using kernel-package
