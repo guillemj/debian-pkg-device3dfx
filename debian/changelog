@@ -9,6 +9,8 @@ device3dfx (2008.06.24-2) UNRELEASED; urgency=low
     - Remove patch and unpatch targets from debian/rules.
     - Remove now unneeded debian/README.source.
   * Rename obsolete debian/module/modules file to debian/module/modprobe.
+  * Use the source control stanza for the module control file, instead of
+    duplicating it and having to keep them in sync.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 21:54:17 +0200
 
