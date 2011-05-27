@@ -1,5 +1,7 @@
-device3dfx (2008.06.24-2) UNRELEASED; urgency=low
+device3dfx (2011.05.27-1) UNRELEASED; urgency=low
 
+  * New upstream release.
+    - Fix build failures with Linux kernels up to 2.6.39.
   * Switch to debhelper compat version 7.
   * Use dh_prep instead of “dh_clean -k”.
   * Cleanup and fix misspellings in debian/changelog.
