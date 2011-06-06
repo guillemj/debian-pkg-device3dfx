@@ -1,5 +1,5 @@
 Source: device3dfx
-Section: graphics
+Section: kernel
 Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
 Homepage: http://glide.sf.net/
