@@ -3,6 +3,7 @@ device3dfx (2011.07.03-1) UNRELEASED; urgency=low
   * New upstream release.
     - Fix build failures with new 3.x Linux kernel versioning scheme.
   * Switch Section from graphics to kernel.
+  * Add build-indep and build-arch targets.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 06 Jun 2011 19:03:36 +0200
 

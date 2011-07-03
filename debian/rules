@@ -13,7 +13,9 @@ pname = device3dfx
 psource = $(pname)-source
 pmodule = $(pname)-module
 
-build:
+build-indep build-arch build:
+
+.PHONY: build-indep build-arch build
 
 clean:
 	dh_testdir
@@ -104,4 +106,4 @@ binary-modules: prep-deb-files
 	dh_md5sums
 	dh_builddeb --destdir=$(DEB_DESTDIR)
 
-.PHONY: build clean binary-indep binary-arch binary install
+.PHONY: clean binary-indep binary-arch binary install
