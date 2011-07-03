@@ -1,4 +1,4 @@
-device3dfx (2011.07.03-1) UNRELEASED; urgency=low
+device3dfx (2011.07.03-1) unstable; urgency=low
 
   * New upstream release.
     - Fix build failures with new 3.x Linux kernel versioning scheme.
@@ -6,7 +6,7 @@ device3dfx (2011.07.03-1) UNRELEASED; urgency=low
   * Add build-indep and build-arch targets.
   * Change targets to depend only on install instead of build and install.
 
- -- Guillem Jover <guillem@debian.org>  Mon, 06 Jun 2011 19:03:36 +0200
+ -- Guillem Jover <guillem@debian.org>  Sun, 03 Jul 2011 15:36:01 +0200
 
 device3dfx (2011.05.27-1) unstable; urgency=low
 
