@@ -5,12 +5,12 @@ Maintainer: Guillem Jover <guillem@debian.org>
 Homepage: http://glide.sf.net/
 Vcs-Browser: http://git.hadrons.org/?p=debian/pkgs/device3dfx.git
 Vcs-Git: git://git.hadrons.org/git/debian/pkgs/device3dfx.git
-Build-Depends: debhelper (>= 7)
+Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.4
 
 Package: device3dfx-source
 Architecture: all
-Depends: module-assistant (>= 0.11.6), make, debhelper (>= 7), ${misc:Depends}
+Depends: module-assistant (>= 0.11.6), make, debhelper (>= 9), ${misc:Depends}
 Recommends: kernel-package
 Description: Linux 2.2+ device driver source for 3Dfx boards
  This package is the source for the 3Dfx device driver to allow access
