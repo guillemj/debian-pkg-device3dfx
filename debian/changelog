@@ -1,3 +1,10 @@
+device3dfx (2013.08.08-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Do not hardcode path for version.h. Closes: #719133
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 08 Aug 2013 21:22:29 +0200
+
 device3dfx (2011.07.03-1) unstable; urgency=low
 
   * New upstream release.

@@ -6,6 +6,7 @@ Currently maintained by Guillem Jover <guillem@debian.org>.
 The upstream source was downloaded from:
 
     <http://sf.net/projects/glide/>
+    <git://git.hadrons.org/git/glide/device3dfx.git>
 
 Copyright Holders:
 
@@ -16,7 +17,7 @@ Copyright Holders:
     Copyright © 1999, 2000 Joseph Kain <joseph@3dfx.com>
     Copyright © 2000, 2001 Zephaniah E. Hull <warp@debian.org>
     Copyright © 2003, 2004 Daniel Borca
-    Copyright © 2002-2008, 2011 Guillem Jover <guillem@hadrons.org>
+    Copyright © 2002-2008, 2011, 2013 Guillem Jover <guillem@hadrons.org>
     et al.
 
 License:
