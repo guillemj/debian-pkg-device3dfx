@@ -4,6 +4,7 @@ device3dfx (2013.08.08-1) UNRELEASED; urgency=low
     - Do not hardcode path for version.h. Closes: #719133
   * Switch source code tarball inside device3dfx-source to tar.xz.
   * Switch source package to xz.
+  * Now using Standards-Version 3.9.4 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Thu, 08 Aug 2013 21:22:29 +0200
 

@@ -6,7 +6,7 @@ Homepage: http://glide.sf.net/
 Vcs-Browser: http://git.hadrons.org/?p=debian/pkgs/device3dfx.git
 Vcs-Git: git://git.hadrons.org/git/debian/pkgs/device3dfx.git
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 
 Package: device3dfx-source
 Architecture: all
