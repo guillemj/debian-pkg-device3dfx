@@ -15,7 +15,7 @@ Using this package to make a module without using kernel-package
 ----------------------------------------------------------------
 
 When you install the device3dfx-source package, it will provide
-"/usr/src/device3dfx.tar.gz". Unpack it ("tar xzvf device3dfx.tar.gz"),
+"/usr/src/device3dfx.tar.xz". Unpack it ("tar xJvf device3dfx.tar.xz"),
 but you can unpack it in another place instead of /usr/src/, for example
 I unpack it from ~/kernel, so my modules are all in ~/kernel/modules.
 
