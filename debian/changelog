@@ -1,4 +1,4 @@
-device3dfx (2013.08.08-1) UNRELEASED; urgency=low
+device3dfx (2013.08.08-1) unstable; urgency=low
 
   * New upstream release.
     - Do not hardcode path for version.h. Closes: #719133
@@ -7,7 +7,7 @@ device3dfx (2013.08.08-1) UNRELEASED; urgency=low
   * Now using Standards-Version 3.9.4 (no changes needed).
   * Switch to debhelper compat version 9.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 08 Aug 2013 21:22:29 +0200
+ -- Guillem Jover <guillem@debian.org>  Thu, 08 Aug 2013 21:36:42 +0200
 
 device3dfx (2011.07.03-1) unstable; urgency=low
 
