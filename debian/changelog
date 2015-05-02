@@ -4,6 +4,7 @@ device3dfx (2013.08.08-2) UNRELEASED; urgency=low
   * Remove license clarification from debian/copyright, upstream sources
     have included a proper license notice for a long time now.
   * Switch debian/copyright to machine-readable format 1.0.
+  * Switch Vcs-Browser to a cgit URL.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
 
