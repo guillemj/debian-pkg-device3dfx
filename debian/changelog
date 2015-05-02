@@ -1,6 +1,8 @@
 device3dfx (2013.08.08-2) UNRELEASED; urgency=low
 
   * Remove packaging history from debian/copyright.
+  * Remove license clarification from debian/copyright, upstream sources
+    have included a proper license notice for a long time now.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
 
