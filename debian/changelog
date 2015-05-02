@@ -1,3 +1,9 @@
+device3dfx (2013.08.08-2) UNRELEASED; urgency=low
+
+  * Remove packaging history from debian/copyright.
+
+ -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
+
 device3dfx (2013.08.08-1) unstable; urgency=low
 
   * New upstream release.
