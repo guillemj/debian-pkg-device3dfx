@@ -7,6 +7,8 @@ device3dfx (2013.08.08-2) UNRELEASED; urgency=low
   * Switch Vcs-Browser to a cgit URL.
   * Now using Standards-Version 3.9.6 (no changes needed).
   * Remove debian/source/options, xz compression is the default now.
+  * Use the debian/changelog date for the generated source module tarball
+    mtime. Based on a patch by Chris Lamb <lamby@debian.org>. Closes: #778213
 
  -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
 

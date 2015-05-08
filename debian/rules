@@ -13,6 +13,8 @@ pname = device3dfx
 psource = $(pname)-source
 pmodule = $(pname)-module
 
+DEB_RELEASE_DATE ?= $(shell dpkg-parsechangelog --show-field Date)
+
 build-indep build-arch build:
 
 .PHONY: build-indep build-arch build
@@ -41,7 +43,8 @@ install: build
 	cp -R debian/source $(target)/debian
 	chown -R root.root $(target)
 	chmod +x $(target)/debian/rules
-	tar -C debian/$(psource)/usr/src -cvJf debian/$(psource)/usr/src/$(pname).tar.xz modules/$(pname)
+	tar -C debian/$(psource)/usr/src --mtime="$(DEB_RELEASE_DATE)" \
+	  -cvJf debian/$(psource)/usr/src/$(pname).tar.xz modules/$(pname)
 	rm -r debian/$(psource)/usr/src/modules
 
 testmodule: install
