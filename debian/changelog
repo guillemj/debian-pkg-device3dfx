@@ -1,4 +1,4 @@
-device3dfx (2013.08.08-2) UNRELEASED; urgency=low
+device3dfx (2013.08.08-2) unstable; urgency=low
 
   * Remove packaging history from debian/copyright.
   * Remove license clarification from debian/copyright, upstream sources
@@ -11,7 +11,7 @@ device3dfx (2013.08.08-2) UNRELEASED; urgency=low
     mtime. Based on a patch by Chris Lamb <lamby@debian.org>. Closes: #778213
   * Add a debian/watch file.
 
- -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
+ -- Guillem Jover <guillem@debian.org>  Sat, 09 May 2015 00:48:58 +0200
 
 device3dfx (2013.08.08-1) unstable; urgency=low
 
