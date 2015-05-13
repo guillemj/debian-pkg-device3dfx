@@ -9,6 +9,7 @@ device3dfx (2013.08.08-2) UNRELEASED; urgency=low
   * Remove debian/source/options, xz compression is the default now.
   * Use the debian/changelog date for the generated source module tarball
     mtime. Based on a patch by Chris Lamb <lamby@debian.org>. Closes: #778213
+  * Add a debian/watch file.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 05:23:52 +0200
 
