@@ -1,3 +1,10 @@
+device3dfx (2013.08.08-3) UNRELEASED; urgency=low
+
+  * Use install instead of cp to generate the module source tarball, so
+    that it is impervious to umask variance.
+
+ -- Guillem Jover <guillem@debian.org>  Tue, 16 Jun 2015 02:47:39 +0200
+
 device3dfx (2013.08.08-2) unstable; urgency=low
 
   * Remove packaging history from debian/copyright.

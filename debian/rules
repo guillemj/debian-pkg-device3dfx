@@ -2,7 +2,7 @@
 # debian/rules for device3dfx to build device3dfx-source
 #
 # Copyright © 1999 Steve Haslam
-# Copyright © 2003, 2004, 2006, 2007, 2008, 2011, 2013 Guillem Jover
+# Copyright © 2003, 2004, 2006-2008, 2011, 2013, 2015 Guillem Jover
 #
 # Distributable under the terms of the GNU GPL version 2 (or later).
 
@@ -26,23 +26,31 @@ clean:
 
 target = debian/$(psource)/usr/src/modules/$(pname)
 
+INSTALL = install
+INSTALL_DIR = $(INSTALL) -d -m755
+INSTALL_DATA = $(INSTALL) -m644
+INSTALL_SCRIPT = $(INSTALL) -m755
+
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
 	
-	install -c -m 644 Makefile *.c $(target)
-	cp -R kbuild $(target)
-	cp -R debian/module $(target)/debian
+	$(INSTALL_DIR) $(target)
+	$(INSTALL_DATA) Makefile *.c $(target)
+	$(INSTALL_DIR) $(target)/kbuild
+	$(INSTALL_DATA) kbuild/* $(target)/kbuild/
+	$(INSTALL_DIR) $(target)/debian/source
+	$(INSTALL_DATA) debian/source/* $(target)/debian/source/
+	$(INSTALL_DATA) debian/module/* $(target)/debian/
 	sed -n '0,/^$$/p' debian/control > $(target)/debian/control.modules.in
 	cat debian/control.templ >> $(target)/debian/control.modules.in
-	cp $(target)/debian/control.modules.in $(target)/debian/control
-	cp debian/rules debian/compat $(target)/debian
-	cp debian/copyright debian/changelog $(target)/debian
-	cp -R debian/source $(target)/debian
-	chown -R root.root $(target)
-	chmod +x $(target)/debian/rules
+	chmod 644 $(target)/debian/control.modules.in
+	$(INSTALL_DATA) $(target)/debian/control.modules.in \
+	                $(target)/debian/control
+	$(INSTALL_DATA) debian/compat debian/copyright debian/changelog $(target)/debian/
+	$(INSTALL_SCRIPT) debian/rules $(target)/debian
 	tar -C debian/$(psource)/usr/src --mtime="$(DEB_RELEASE_DATE)" \
 	  -cvJf debian/$(psource)/usr/src/$(pname).tar.xz modules/$(pname)
 	rm -r debian/$(psource)/usr/src/modules
