@@ -51,7 +51,8 @@ install: build
 	                $(target)/debian/control
 	$(INSTALL_DATA) debian/compat debian/copyright debian/changelog $(target)/debian/
 	$(INSTALL_SCRIPT) debian/rules $(target)/debian
-	tar -C debian/$(psource)/usr/src --mtime="$(DEB_RELEASE_DATE)" \
+	tar -C debian/$(psource)/usr/src \
+	  --sort=name --mtime="$(DEB_RELEASE_DATE)" \
 	  -cvJf debian/$(psource)/usr/src/$(pname).tar.xz modules/$(pname)
 	rm -r debian/$(psource)/usr/src/modules
 
