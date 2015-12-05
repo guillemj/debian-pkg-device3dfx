@@ -1,3 +1,9 @@
+device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
+
+  * Use https for hadrons.org URLs.
+
+ -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:34:43 +0100
+
 device3dfx (2013.08.08-3) unstable; urgency=low
 
   * Use install instead of cp to generate the module source tarball, so
