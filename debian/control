@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Guillem Jover <guillem@debian.org>
 Homepage: http://glide.sf.net/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/device3dfx.git
-Vcs-Git: git://git.hadrons.org/git/debian/pkgs/device3dfx.git
+Vcs-Git: https://git.hadrons.org/git/debian/pkgs/device3dfx.git
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.6
 

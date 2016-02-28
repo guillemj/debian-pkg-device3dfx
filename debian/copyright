@@ -3,7 +3,7 @@ Upstream-Name: device3dfx
 Upstream-Contact: Guillem Jover <guillem@hadrons.org>
 Source:
  http://sf.net/projects/glide/
- git://git.hadrons.org/git/glide/device3dfx.git
+ https://git.hadrons.org/git/glide/device3dfx.git
 
 Files: *
 Copyright:
