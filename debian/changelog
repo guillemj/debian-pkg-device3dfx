@@ -4,6 +4,7 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
   * Sort generated kernel module source tarball contents to make the build
     reproducible.
   * Switch URLs for git repository from git:// to https://.
+  * Now using Standards-Version 3.9.7 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:34:43 +0100
 
