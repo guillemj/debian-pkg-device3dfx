@@ -1,4 +1,4 @@
-device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
+device3dfx (2013.08.08-4) unstable; urgency=medium
 
   * Use https for hadrons.org URLs.
   * Sort generated kernel module source tarball contents to make the build
@@ -6,7 +6,7 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
   * Switch URLs for git repository from git:// to https://.
   * Now using Standards-Version 3.9.7 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:34:43 +0100
+ -- Guillem Jover <guillem@debian.org>  Mon, 29 Feb 2016 00:19:35 +0100
 
 device3dfx (2013.08.08-3) unstable; urgency=low
 
