@@ -7,6 +7,7 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
   * Set owner and group to root:root in generated driver source tarball.
   * Set Rules-Requires-Root to no.
   * Update copyright years.
+  * Switch from Priority extra to optional.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:24:21 +0100
 

@@ -1,6 +1,6 @@
 Source: device3dfx
 Section: kernel
-Priority: extra
+Priority: optional
 Maintainer: Guillem Jover <guillem@debian.org>
 Homepage: http://glide.sf.net/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/device3dfx.git
