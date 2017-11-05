@@ -2,6 +2,7 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
 
   * Now using Standards-Version 4.1.1 (no changes needed).
   * Line-wrap and sort debian/control fields.
+  * Switch to debhelper compat version 10.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:24:21 +0100
 
