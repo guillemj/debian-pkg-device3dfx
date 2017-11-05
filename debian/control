@@ -6,12 +6,18 @@ Homepage: http://glide.sf.net/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/device3dfx.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/device3dfx.git
 Standards-Version: 4.1.1
-Build-Depends: debhelper (>= 9)
+Build-Depends:
+ debhelper (>= 9),
 
 Package: device3dfx-source
 Architecture: all
-Depends: module-assistant (>= 0.11.6), make, debhelper (>= 9), ${misc:Depends}
-Recommends: kernel-package
+Depends:
+ ${misc:Depends},
+ debhelper (>= 9),
+ make,
+ module-assistant (>= 0.11.6),
+Recommends:
+ kernel-package,
 Description: Linux 2.2+ device driver source for 3Dfx boards
  This package is the source for the 3Dfx device driver to allow access
  to 3Dfx boards and setting its MTRR:s correctly without the user having
