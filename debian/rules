@@ -9,11 +9,11 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+include /usr/share/dpkg/default.mk
+
 pname = device3dfx
 psource = $(pname)-source
 pmodule = $(pname)-module
-
-DEB_RELEASE_DATE ?= $(shell dpkg-parsechangelog --show-field Date)
 
 build-indep build-arch build:
 
@@ -53,7 +53,7 @@ install: build
 	$(INSTALL_SCRIPT) debian/rules $(target)/debian
 	tar -C debian/$(psource)/usr/src \
 	  --owner=root:0 --group=root:0 \
-	  --sort=name --mtime="$(DEB_RELEASE_DATE)" \
+	  --sort=name --mtime="@$(SOURCE_DATE_EPOCH)" \
 	  -cvJf debian/$(psource)/usr/src/$(pname).tar.xz modules/$(pname)
 	rm -r debian/$(psource)/usr/src/modules
 

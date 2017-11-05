@@ -8,6 +8,8 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
   * Set Rules-Requires-Root to no.
   * Update copyright years.
   * Switch from Priority extra to optional.
+  * Include dpkg Makefile fragment instead of using dpkg-parsechangelog
+    directly.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:24:21 +0100
 
