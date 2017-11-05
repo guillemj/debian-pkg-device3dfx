@@ -5,6 +5,7 @@ device3dfx (2013.08.08-5) UNRELEASED; urgency=medium
   * Switch to debhelper compat version 10.
   * Switch to debian/watch format version 4.
   * Set owner and group to root:root in generated driver source tarball.
+  * Set Rules-Requires-Root to no.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 05:24:21 +0100
 
