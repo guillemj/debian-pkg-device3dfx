@@ -1,6 +1,7 @@
 device3dfx (2013.08.08-6) UNRELEASED; urgency=medium
 
   * Now using Standards-Version 4.3.0 (no changes needed).
+  * Switch to debhelper compat version 11.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 31 Dec 2018 13:18:34 +0100
 
