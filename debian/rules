@@ -2,7 +2,7 @@
 # debian/rules for device3dfx to build device3dfx-source
 #
 # Copyright © 1999 Steve Haslam
-# Copyright © 2003, 2004, 2006-2008, 2011, 2013, 2015 Guillem Jover
+# Copyright © 2003-2004, 2006-2008, 2011, 2013, 2015, 2018 Guillem Jover
 #
 # Distributable under the terms of the GNU GPL version 2 (or later).
 
@@ -91,7 +91,7 @@ kdist_config: prep-deb-files
 
 kdist_configure: kdist_config
 
-kdist_clean: clean
+kdist_clean: prep-deb-files
 	dh_testdir
 	dh_testroot
 	dh_clean
