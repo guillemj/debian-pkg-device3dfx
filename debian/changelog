@@ -1,4 +1,4 @@
-device3dfx (2013.08.08-6) UNRELEASED; urgency=medium
+device3dfx (2013.08.08-6) unstable; urgency=medium
 
   * Now using Standards-Version 4.3.0 (no changes needed).
   * Switch to debhelper compat version 11.
@@ -7,7 +7,7 @@ device3dfx (2013.08.08-6) UNRELEASED; urgency=medium
   * Remove reference to dpkg-buildpackage -rfakeroot option from
     README.Debian, it has been the default for a long time now.
 
- -- Guillem Jover <guillem@debian.org>  Mon, 31 Dec 2018 13:18:34 +0100
+ -- Guillem Jover <guillem@debian.org>  Mon, 31 Dec 2018 13:28:26 +0100
 
 device3dfx (2013.08.08-5) unstable; urgency=medium
 
