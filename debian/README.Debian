@@ -29,7 +29,7 @@ it somewhere else by defining KSRC.
 Example:
 
   cd ~/kernel/modules/device3dfx
-  KSRC=~/kernel/linux dpkg-buildpackage -rfakeroot
+  KSRC=~/kernel/linux dpkg-buildpackage
   sudo dpkg -i ~/kernel/device3dfx-module-2.4.20_2003.05.16-1+custom_i386.deb
   debclean
 
